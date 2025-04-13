@@ -33,7 +33,7 @@ Route 53 A Records (www + non-www)
   - Index document: `index.html`
 - Public access is blocked; content is served through CloudFront
 - This is the only bucket used vendidollc.com
-- www.vendidollc.com is redirected to vendidollc.com in CloudFront
+- `www.vendidollc.com` is redirected to `vendidollc.com` in CloudFront
 
 ---
 
