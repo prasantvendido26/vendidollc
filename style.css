@@ -1,0 +1,250 @@
+body,div,dl,dt,dd,ul,ol,li,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+
+  margin:0;
+  
+  padding:0;
+
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;}
+
+  .nav{
+    padding:20px;
+    font-size: 16px;
+    
+  }
+  .logo a:hover{
+    color:#000;
+      text-decoration: none;
+  }
+  .menu a:hover{
+    color:#000;
+      text-decoration: none;
+      text-decoration-color: #000;
+      border-bottom:1px dotted; 
+  }
+  .w3-container{
+    padding: 0;
+    width:70%;
+    margin: 0 auto;
+  }
+  
+  .email{
+    float: right;
+    
+  }
+  .email a:hover{
+    color:#000;
+      text-decoration: none;
+      text-decoration-color: #000;
+      border-bottom:1px dotted;
+  } 
+
+  .main-hero{
+    padding-top: 150px;
+    margin: 0 auto;
+  }
+  .sub-hero{
+    font-size: 24px;
+    color: white;
+  }
+  .content{
+    margin: 0 auto;
+    padding-left:20px;
+    padding-right:20px;
+    width: 70%;
+  }
+  .quote{
+    margin: 0 auto;
+    padding: 40px;
+  }
+  .fundamentals{
+    background-color: #0F5156;
+    height: auto;
+    padding-top: 60px;
+    margin: 0 auto;
+  }
+  .title-section{
+    font-size: 48px; 
+    line-height: 56px; 
+    font-weight: bold; 
+    color:white;  
+    margin: 0 auto;
+  }
+  .fundamentals-mobile{
+    background-color: #0F5156;
+    height: auto;
+    padding-top: 60px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+  .squad{
+    text-align: center;
+    padding-top: 40px;
+    width: 100%;
+  }
+  .disclaimer-content{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+
+  }
+  .title-disclaimer{
+    font-size:32px; 
+    font-weight:bold;
+  }
+  .disclaimer-content{
+    font-size:16px;
+  }
+  .subtitle-disclaimer{
+    font-weight: bold;
+  }
+
+
+ 
+  
+ 
+
+@media screen and (min-width: 1201px){
+  .nav-mobile{
+    display: none;
+  }
+  .hero{
+    background-image: url('images/bg-hero.png');
+    height: 475px;
+    width: 100%;
+    font-weight:bold; 
+    font-size: 64px;
+    text-align: center;
+    
+  }
+  .only-text1{
+    font-size: 48px; 
+    line-height:56px;
+    padding-top: 20px;
+    font-weight: bold;
+  }
+  .only-text2{
+    padding-top: 12px;
+    font-size: 16px; 
+    line-height: 24px;
+  }
+  .content{
+   padding-top: 80px;
+  }
+  .content-mobile{
+    display: none;
+  }
+  .footer-mobile{
+    display: none;
+  }
+  .footer-desktop{
+    width: 70%;
+    margin: 0 auto;
+   }
+  .footer-links a{
+    color: black;
+    
+  }
+  .footer-links a:hover{
+    color: black;
+    border-bottom:1px dotted;
+    text-decoration-color: black;
+    text-decoration: none;
+  }
+  .quote-mobile{
+    display: none;
+  }
+  .fundamentals-mobile{
+    display: none;
+  }
+  }
+
+@media screen and (max-width: 1200px){
+   
+    .logo-mobile{ 
+      margin: 0;
+      text-align: center;
+    }
+    .nav{
+      display: none;
+    }
+    .logo{
+      display: none;
+    }
+    .menu{
+      display: none;
+    }
+    .email{
+      display: none;
+    }
+    .menu-mobile{
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+    }
+    .menu-mobile a:hover{
+      color:#000;
+        text-decoration: none;
+        text-decoration-color: #000;
+        border-bottom:1px dotted; 
+    }
+    .hero{
+      margin-top: 20px;
+      background-image: url('images/bg-hero.png');
+      height: 350px;
+      width: 100%;
+      line-height: 56px;
+      text-align: center;
+    }
+    .main-hero{
+      padding-top: 100px;
+      font-weight:bold; 
+      font-size: 44px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .content{
+      display: none;
+    }
+    .content-mobile{
+      width: 80%;
+      margin: 0 auto;
+    }
+    .only-text1{
+      font-size: 36px; 
+      line-height:44px;
+      padding-top: 30px;
+      font-weight: bold;
+    }
+    .only-text2{
+      padding-top: 8px;
+      font-size: 16px; 
+      line-height: 24px;
+    }
+    .footer-desktop{
+      display: none;
+    }
+    .footer-mobile{
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+     }
+    .footer-mobile a{
+      color: black;
+      
+    }
+    
+    .quote{
+      display: none;
+    }
+    .quote-mobile{
+      padding-top: 10px;
+      margin: 0 auto;
+    }
+    .fundamentals{
+      display: none;
+    }
+    .social a:hover{
+      text-decoration: none;
+    }
+  }
