@@ -43,7 +43,7 @@ Route 53 A Records (www + non-www)
   - `vendidollc.com`
   - `www.vendidollc.com`
 - HTTPS enabled using ACM SSL certificate covering both domains
-- A **CloudFront Function** named `ReditectWWWToRoot` redirects all traffic from `www.vendidollc.com` to `vendidollc.com`
+- A **CloudFront Function** named `RedirectWWWToRoot` redirects all traffic from `www.vendidollc.com` to `vendidollc.com`
 - Cache is invalidated automatically on each deployment via Github Actions
 ---
 
