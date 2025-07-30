@@ -11,6 +11,17 @@
   </head>
 
   <body>
+    <div id="disclaimerModal">
+      <div class="modal-content">
+        <h2>Disclaimer</h2>
+        <p><strong>FAIR HOUSING DISCLAIMER</strong> Vendido LLC encourages and supports an advertising and marketing program in which there are no barriers to obtaining housing due to race, color, religion, sex, handicap, familial status, or national origin. All residential real estate information on the website from which this page is linked is subject to the Federal Fair Housing Act, Title VIII of the Civil Rights Act of 1968, as amended, which makes it illegal to advertise “any preference, limitation, or discrimination because of race, color, religion, sex, handicap, familial status, or national origin, or intention to make any such preference, limitation, or discrimination.” Your state or local jurisdiction may impose additional requirements. We are committed to the letter and spirit of the United States policy for the achievement of equal housing opportunities.</p>
+    
+        <p><strong>NO OFFER TO SELL OR NO OFFER OF REPRESENTATION</strong> NO INFORMATION OR MATERIAL ON THE SITE SHALL BE CONSTRUED IN ANY WAY AS AN OFFER OR SOLICITATION FOR SALE OF REAL ESTATE OR AS AN OFFER OF REPRESENTATION FOR BROKER OR AGENT SERVICES AS IT RELATES TO ANY REAL ESTATE TRANSACTION. Vendido is a software as a service platform which utilizes patent pending technology to assist real estate agents and real estate service providers in providing information and services for their professional business operations. It does not provide real estate agent or broker services nor does it assist any individuals or entities with the purchase or sale of real estate. The information on the Site is provided for information purposes only. You should seek advice and proper legal counsel with respect to all closing costs, timing considerations, financing options, default provisions, zoning implications, renovation considerations and appropriate transfer taxes.</p>
+    
+        <p>By clicking "I Agree", you agree to our terms and conditions.</p>
+        <button class="agree-btn" onclick="closeDisclaimer()">I Agree</button>
+      </div>
+    </div>
     <div class="nav">
       <div class="container">
           <div class="row">
@@ -169,7 +180,18 @@
     </a>&nbsp;&nbsp;&nbsp;Copyright 2025 Vendido LLC &nbsp;&nbsp;&nbsp; License# PA192051<br/>
   </div>
 
-  
-
+    <script>
+      // Show modal only for first-time visitors
+      window.onload = function() {
+        if (!localStorage.getItem("disclaimerAccepted")) {
+          document.getElementById("disclaimerModal").style.display = "block";
+        }
+      }
+    
+      function closeDisclaimer() {
+        document.getElementById("disclaimerModal").style.display = "none";
+        localStorage.setItem("disclaimerAccepted", "true");
+      }
+    </script>
   </body>
 </html>
