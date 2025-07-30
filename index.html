@@ -8,6 +8,59 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <style>
+      body.modal-open {
+        overflow: hidden;
+      }
+  
+      /* Modal styles */
+      #disclaimerModal {
+        display: none;
+        position: fixed;
+        z-index: 10000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+  
+      .modal-content {
+        background-color: #fff;
+        margin: 5% auto;
+        padding: 20px 30px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 900px;
+        max-height: 90%;
+        overflow-y: auto;
+        font-family: sans-serif;
+      }
+  
+      .modal-content h2 {
+        margin-top: 0;
+      }
+  
+      .modal-content p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+  
+      .agree-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+  
+      .agree-btn:hover {
+        background-color: #555;
+      }
+    </style>
   </head>
 
   <body>
@@ -19,7 +72,7 @@
         <p><strong>NO OFFER TO SELL OR NO OFFER OF REPRESENTATION</strong> NO INFORMATION OR MATERIAL ON THE SITE SHALL BE CONSTRUED IN ANY WAY AS AN OFFER OR SOLICITATION FOR SALE OF REAL ESTATE OR AS AN OFFER OF REPRESENTATION FOR BROKER OR AGENT SERVICES AS IT RELATES TO ANY REAL ESTATE TRANSACTION. Vendido is a software as a service platform which utilizes patent pending technology to assist real estate agents and real estate service providers in providing information and services for their professional business operations. It does not provide real estate agent or broker services nor does it assist any individuals or entities with the purchase or sale of real estate. The information on the Site is provided for information purposes only. You should seek advice and proper legal counsel with respect to all closing costs, timing considerations, financing options, default provisions, zoning implications, renovation considerations and appropriate transfer taxes.</p>
     
         <p>By clicking "I Agree", you agree to our terms and conditions.</p>
-        <button class="agree-btn" onclick="closeDisclaimer()">I Agree</button>
+        <button class="agree-btn" onclick="acceptDisclaimer()">I Agree</button>
       </div>
     </div>
     <div class="nav">
@@ -180,18 +233,19 @@
     </a>&nbsp;&nbsp;&nbsp;Copyright 2025 Vendido LLC &nbsp;&nbsp;&nbsp; License# PA192051<br/>
   </div>
 
-    <script>
-      // Show modal only for first-time visitors
-      window.onload = function() {
-        if (!localStorage.getItem("disclaimerAccepted")) {
-          document.getElementById("disclaimerModal").style.display = "block";
-        }
+  <script>
+    window.onload = function () {
+      if (!localStorage.getItem('disclaimerAccepted')) {
+        document.getElementById('disclaimerModal').style.display = 'block';
+        document.body.classList.add('modal-open');
       }
-    
-      function closeDisclaimer() {
-        document.getElementById("disclaimerModal").style.display = "none";
-        localStorage.setItem("disclaimerAccepted", "true");
-      }
-    </script>
+    }
+  
+    function acceptDisclaimer() {
+      localStorage.setItem('disclaimerAccepted', 'true');
+      document.getElementById('disclaimerModal').style.display = 'none';
+      document.body.classList.remove('modal-open');
+    }
+  </script>
   </body>
 </html>
